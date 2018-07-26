@@ -7,7 +7,12 @@
 
 var button = document.querySelector('.rte-italics');
 button.addEventListener('click', function(btn){
-	document.querySelector('.textbox').style.fontStyle = 'italic';
+		if(document.querySelector('.textbox').style.fontStyle === "") {
+           document.querySelector('.textbox').style.fontStyle = 'italic';
+        } else {
+           document.querySelector('.textbox').style.fontStyle = "";
+        }
+  //       console.log(document.querySelector('.textbox').style.fontStyle);
 })
 
 /**
@@ -19,7 +24,12 @@ button.addEventListener('click', function(btn){
 
 var buttonBold = document.querySelector('.rte-bold');
 buttonBold.addEventListener('click', function(){
-	document.querySelector('.textbox').style.fontWeight = 700;
+	console.log(document.querySelector('.textbox').style.fontWeight);
+	if (document.querySelector('.textbox').style.fontWeight === "") {
+		document.querySelector('.textbox').style.fontWeight = 700;
+	} else {
+		document.querySelector('.textbox').style.fontWeight = "";
+	}
 });
 
 /**
